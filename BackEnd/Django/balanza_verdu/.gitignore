@@ -1,0 +1,58 @@
+# Entorno virtual
+venv/
+.env
+*.env
+
+# Archivos de configuración de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Migraciones de Django
+**/migrations/
+db.sqlite3
+
+# Archivos de logs
+*.log
+*.out
+*.err
+
+# Archivos temporales
+*.swp
+*.bak
+*.tmp
+*.temp
+
+# Configuraciones del editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Dependencias instaladas
+*.egg-info/
+*.dist-info/
+
+# Archivos de compilación
+build/
+dist/
+*.egg
+
+# Archivos de Docker
+Dockerfile
+docker-compose.yml
+
+# Archivos de node.js (si usas React o Vue en el frontend)
+node_modules/
+
+# Archivos generados por pytest
+htmlcov/
+.coverage
+*.cover
+
+# Configuración de IntelliJ / PyCharm
+.idea/
