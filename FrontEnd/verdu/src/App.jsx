@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import { UIProvider } from './context/UIContext';
+import LoginPage from './pages/LoginPage';
+import PosPage from './pages/PosPage';
+import BoardPage from './pages/BoardPage';
+import DashboardPage from './pages/DashboardPage';
+import SalesPage from './pages/SalesPage';
+import TerminalsPage from './pages/TerminalsPage';
+import AdminLayout from './layouts/AdminLayout';
+import ProtectedRoute from './components/ProtectedRoute';
+import ProductsPage from './pages/ProductsPage';
+import CustomersPage from './pages/CustomersPage';
+import UsersPage from './pages/UsersPage';
+import PaymentsPage from './pages/PaymentsPage';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <UIProvider>
+        <AuthProvider>
+          <Routes>
+            {/* Public Routes */}
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/pos" element={<PosPage />} />
+            <Route path="/board" element={<BoardPage />} />
+
+            {/* Admin Protected Routes */}
+            <Route path="/admin" element={
+              <ProtectedRoute>
+                <AdminLayout />
+              </ProtectedRoute>
+            }>
+              <Route path="dashboard" element={<DashboardPage />} />
+              <Route path="sales" element={<SalesPage />} />
+              <Route path="terminals" element={<TerminalsPage />} />
+              <Route path="products" element={<ProductsPage />} />
+              <Route path="customers" element={<CustomersPage />} />
+              <Route path="users" element={<UsersPage />} />
+              <Route path="payments" element={<PaymentsPage />} />
+              <Route index element={<Navigate to="dashboard" replace />} />
+            </Route>
+
+            {/* Fallback */}
+            <Route path="/" element={<Navigate to="/login" replace />} />
+          </Routes>
+        </AuthProvider>
+      </UIProvider>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

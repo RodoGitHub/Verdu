@@ -1,0 +1,84 @@
+services:
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  redis:
+    image: redis:alpine
+    restart: always
+    ports:
+      - "6379:6379"
+
+  backend:
+    build:
+      context: ./BackEnd
+      dockerfile: Dockerfile
+    # Force working directory to match the volume mount so VS Code opens here by default
+    working_dir: /workspace
+    # Keep container alive so VS Code can connect even if Django fails
+    command: sleep infinity
+    volumes:
+      - ./BackEnd/Django:/app/Django
+      - .:/workspace
+      - ./BackEnd/Django/balanza_verdu/media:/app/Django/balanza_verdu/media
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=${DEBUG}
+      - DB_ENGINE=django.db.backends.mysql
+      - DB_NAME=${MYSQL_DATABASE}
+      - DB_USER=${MYSQL_USER}
+      - DB_PASSWORD=${MYSQL_PASSWORD}
+      - DB_HOST=db
+      - DB_PORT=3306
+      - REDIS_HOST=${REDIS_HOST:-redis}
+      - SECRET_KEY=${DJANGO_SECRET_KEY}
+    depends_on:
+      - db
+      - redis
+    # devices:
+    #   - "/dev/ttyUSB0:/dev/ttyUSB0"
+
+  scale-agent:
+    build:
+      context: ./BackEnd
+      dockerfile: Dockerfile
+    restart: always
+    command: python /app/Django/fake_scale_agent_dev.py --server ws://backend:8000 --simulate
+    volumes:
+      - ./BackEnd/Django:/app/Django
+    depends_on:
+      - backend
+
+  frontend:
+    build:
+      context: ./FrontEnd/verdu
+      dockerfile: Dockerfile
+      target: build
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        pnpm install
+        pnpm run dev
+    volumes:
+      - ./FrontEnd/verdu:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8000/api/
+    depends_on:
+      - backend
+
+volumes:
+  db_data:

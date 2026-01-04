@@ -1,0 +1,37 @@
+name: Deploy to Local Production
+
+on:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  deploy:
+    runs-on: self-hosted  # <--- Esto indica que corra en TU servidor, no en los de GitHub
+    
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    - name: Create .env file
+      # Recreamos el .env usando "Secretos" de GitHub para no subirlos al repo
+      run: |
+        echo "MYSQL_ROOT_PASSWORD=${{ secrets.MYSQL_ROOT_PASSWORD }}" > .env
+        echo "MYSQL_DATABASE=${{ secrets.MYSQL_DATABASE }}" >> .env
+        echo "MYSQL_USER=${{ secrets.MYSQL_USER }}" >> .env
+        echo "MYSQL_PASSWORD=${{ secrets.MYSQL_PASSWORD }}" >> .env
+        echo "DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}" >> .env
+        echo "DEBUG=${{ secrets.DEBUG }}" >> .env
+        echo "ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}" >> .env
+        echo "REDIS_HOST=redis" >> .env
+
+    - name: Build and Deploy
+      run: |
+        echo "⬇️ Bajando cambios y reconstruyendo..."
+        # Detener contenedores viejos
+        docker-compose down
+        
+        # Levantar nuevos (Esto hará el build automáticamente si cambiaron cosas)
+        docker-compose up --build -d
+        
+        echo "🧹 Limpiando imágenes viejas..."
+        docker image prune -f

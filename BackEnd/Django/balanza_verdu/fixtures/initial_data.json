@@ -1,0 +1,1322 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$h8EJ0zT2XEUAG80sNzbYCR$+j+bH4xni752ViVlAIOibrxWhNkvXcK5oUiGkKZl4CQ=",
+    "last_login": "2025-12-23T14:46:34.493Z",
+    "is_superuser": true,
+    "username": "rfpalacios",
+    "first_name": "",
+    "last_name": "",
+    "email": "rodo@rodo.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-12-22T22:22:47.774Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$zqGnlkxBSmxSxuNUkLq0Ua$cc2pM35oKtKCwvbVSA29SxBDFE0fHggxmQ8Rm9p0XPs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Valeria",
+    "first_name": "Valeria",
+    "last_name": "Veritier",
+    "email": "vale@vale.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-23T14:23:31.949Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$ODARCsZEXccJEybJtEbHG2$JjtBl6QpWCa5hDXotATFjavTlfqaHuDhSWoptVmlw94=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Roxana",
+    "first_name": "Roxana",
+    "last_name": "",
+    "email": "roxana@roxana.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-23T14:24:01.718Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$AgBqfj4AeWYOD00PrwIAai$P0436UkOcWnBEDVOAJVjdj83rv4/mScYv6kXHTbCeo0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Naty",
+    "first_name": "Natalia",
+    "last_name": "",
+    "email": "naty@naty.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-02T18:55:42.492Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$UPDSTwEsFBjjCO3UqTJV6R$nvqZlvlTckSeXq8lghulOJ81rpBV1JltWOvSJhWzuig=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "rodo",
+    "first_name": "Rodolfo",
+    "last_name": "Palacios",
+    "email": "rodo@rodo.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-02T18:57:08.021Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$lFLyXauL7OuGyC6ZTATYoP$j/We0FvEHvz65jabI1LzvKyaMcQQDZOX1mJW4HNo6cw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Anabella",
+    "first_name": "Anabella",
+    "last_name": "",
+    "email": "anabella@anabella.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-02T18:57:43.787Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "name": "Fruta"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 2,
+  "fields": {
+    "name": "Verdura"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 3,
+  "fields": {
+    "name": "Hoja Verde"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 4,
+  "fields": {
+    "name": "Pastas"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 5,
+  "fields": {
+    "name": "Hongos"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 6,
+  "fields": {
+    "name": "Otros"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "name": "Manzana Verde",
+    "price": "3411.76",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-23T14:09:42.132Z",
+    "upgrade_date": "2025-12-31T17:33:44.928Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/green_apple.png",
+    "bulk_price": "58000.00",
+    "bulk_quantity": "17.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "name": "Manzana Red",
+    "price": "3764.71",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T01:35:39.272Z",
+    "upgrade_date": "2026-01-01T19:41:59.600Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/manzana.jpeg",
+    "bulk_price": "64000.00",
+    "bulk_quantity": "17.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "name": "Arandano",
+    "price": "1666.67",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:17:17.379Z",
+    "upgrade_date": "2026-01-01T00:48:02.643Z",
+    "unit": "UN",
+    "category": 1,
+    "image": "products/arandano.png",
+    "bulk_price": "20000.00",
+    "bulk_quantity": "12.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "name": "Banana Ecuador",
+    "price": "1888.89",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:20:52.935Z",
+    "upgrade_date": "2025-12-31T18:56:46.000Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/banana_ecuador.png",
+    "bulk_price": "34000.00",
+    "bulk_quantity": "18.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "name": "Batata",
+    "price": "890.91",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:23:33.832Z",
+    "upgrade_date": "2025-12-31T19:00:31.618Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/batata.png",
+    "bulk_price": "9800.00",
+    "bulk_quantity": "11.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "name": "Cebollla",
+    "price": "406.25",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:25:02.042Z",
+    "upgrade_date": "2025-12-31T19:00:31.596Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/cebolla.png",
+    "bulk_price": "6500.00",
+    "bulk_quantity": "16.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "name": "Cereza",
+    "price": "8000.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:26:43.536Z",
+    "upgrade_date": "2026-01-01T00:49:58.749Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/cereza.png",
+    "bulk_price": "40000.00",
+    "bulk_quantity": "5.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "name": "Ciruela",
+    "price": "3600.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:27:19.709Z",
+    "upgrade_date": "2026-01-01T00:49:58.761Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/ciruela.png",
+    "bulk_price": "36000.00",
+    "bulk_quantity": "10.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "name": "Frutilla",
+    "price": "6800.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:27:41.864Z",
+    "upgrade_date": "2026-01-01T00:52:00.199Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/frutilla.png",
+    "bulk_price": "34000.00",
+    "bulk_quantity": "5.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "name": "Kiwi",
+    "price": "8400.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:28:05.444Z",
+    "upgrade_date": "2026-01-01T00:54:20.479Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/kiwi.png",
+    "bulk_price": "84000.00",
+    "bulk_quantity": "10.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "name": "Limon",
+    "price": "3437.50",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:28:47.146Z",
+    "upgrade_date": "2025-12-31T19:00:31.586Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/limon.png",
+    "bulk_price": "55000.00",
+    "bulk_quantity": "16.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "name": "Melon",
+    "price": "1764.71",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:29:20.768Z",
+    "upgrade_date": "2026-01-01T00:54:20.502Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/melon.png",
+    "bulk_price": "30000.00",
+    "bulk_quantity": "17.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "name": "Papa",
+    "price": "441.18",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:29:45.991Z",
+    "upgrade_date": "2025-12-31T18:56:46.031Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/papa.png",
+    "bulk_price": "7500.00",
+    "bulk_quantity": "17.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "name": "Pimiento Rojo",
+    "price": "1777.78",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:30:33.243Z",
+    "upgrade_date": "2025-12-31T19:02:12.204Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/pimiento_rojo.png",
+    "bulk_price": "16000.00",
+    "bulk_quantity": "9.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "name": "Pimiento Verde",
+    "price": "1555.56",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:31:23.299Z",
+    "upgrade_date": "2025-12-31T19:02:12.215Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/pimiento_verde.png",
+    "bulk_price": "14000.00",
+    "bulk_quantity": "9.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "name": "Pimiento Amarillo",
+    "price": "2000.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:31:59.246Z",
+    "upgrade_date": "2026-01-01T00:48:02.608Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/pimiento_amarillo.png",
+    "bulk_price": "18000.00",
+    "bulk_quantity": "9.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 17,
+  "fields": {
+    "name": "Pomelo",
+    "price": "2916.67",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:32:35.141Z",
+    "upgrade_date": "2025-12-31T19:03:45.008Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/pomelo.png",
+    "bulk_price": "35000.00",
+    "bulk_quantity": "12.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 18,
+  "fields": {
+    "name": "Tomate Perita",
+    "price": "1352.94",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:33:03.142Z",
+    "upgrade_date": "2025-12-31T19:02:12.226Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/tomate_perita.png",
+    "bulk_price": "23000.00",
+    "bulk_quantity": "17.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 19,
+  "fields": {
+    "name": "Tomate Redondo",
+    "price": "1294.12",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:33:35.160Z",
+    "upgrade_date": "2025-12-31T18:56:46.010Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/tomate_redondo.png",
+    "bulk_price": "22000.00",
+    "bulk_quantity": "17.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 20,
+  "fields": {
+    "name": "Tomate Cherry",
+    "price": "2200.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:34:05.920Z",
+    "upgrade_date": "2026-01-01T16:27:03.846Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/tomate_cherry.png",
+    "bulk_price": "22000.00",
+    "bulk_quantity": "10.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 21,
+  "fields": {
+    "name": "Cebolla Morada",
+    "price": "1000.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:34:50.919Z",
+    "upgrade_date": "2025-12-31T19:00:31.606Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/cebolla_morada.png",
+    "bulk_price": "17000.00",
+    "bulk_quantity": "17.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 22,
+  "fields": {
+    "name": "Zanahoria",
+    "price": "1050.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:35:51.807Z",
+    "upgrade_date": "2025-12-31T18:56:46.044Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/zanahoria.png",
+    "bulk_price": "10500.00",
+    "bulk_quantity": "10.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 23,
+  "fields": {
+    "name": "Higos",
+    "price": "8000.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:36:24.976Z",
+    "upgrade_date": "2026-01-01T00:54:20.466Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/higos.png",
+    "bulk_price": "16000.00",
+    "bulk_quantity": "2.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 24,
+  "fields": {
+    "name": "Durazno Pelon",
+    "price": "3900.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:37:00.383Z",
+    "upgrade_date": "2026-01-01T00:52:00.187Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/durazno_pelon.png",
+    "bulk_price": "39000.00",
+    "bulk_quantity": "10.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 25,
+  "fields": {
+    "name": "Durazno cepillado",
+    "price": "3600.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:37:32.895Z",
+    "upgrade_date": "2026-01-01T00:52:00.174Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/durazno_cepillado.png",
+    "bulk_price": "36000.00",
+    "bulk_quantity": "10.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 26,
+  "fields": {
+    "name": "Lima",
+    "price": "3500.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:38:00.572Z",
+    "upgrade_date": "2026-01-01T00:54:20.491Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/lima.png",
+    "bulk_price": "7000.00",
+    "bulk_quantity": "2.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 27,
+  "fields": {
+    "name": "Damasco",
+    "price": "6500.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:38:43.675Z",
+    "upgrade_date": "2026-01-01T00:52:00.164Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/damasco.png",
+    "bulk_price": "65000.00",
+    "bulk_quantity": "10.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 28,
+  "fields": {
+    "name": "Naranja Jugo",
+    "price": "1117.65",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:39:07.342Z",
+    "upgrade_date": "2025-12-31T18:57:48.224Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/naranja_jugo.png",
+    "bulk_price": "19000.00",
+    "bulk_quantity": "17.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 29,
+  "fields": {
+    "name": "Palta Hass",
+    "price": "7500.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:39:32.316Z",
+    "upgrade_date": "2026-01-01T00:54:20.513Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/palta_hass.png",
+    "bulk_price": "75000.00",
+    "bulk_quantity": "10.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 30,
+  "fields": {
+    "name": "Acelga",
+    "price": "666.67",
+    "percentage": "90.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:41:09.597Z",
+    "upgrade_date": "2025-12-31T19:03:45.029Z",
+    "unit": "UN",
+    "category": 3,
+    "image": "products/acelga.png",
+    "bulk_price": "4000.00",
+    "bulk_quantity": "6.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 31,
+  "fields": {
+    "name": "Achicoria",
+    "price": "900.00",
+    "percentage": "100.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:41:54.715Z",
+    "upgrade_date": "2026-01-01T16:29:08.203Z",
+    "unit": "UN",
+    "category": 3,
+    "image": "products/achicoria.png",
+    "bulk_price": "900.00",
+    "bulk_quantity": "1.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 32,
+  "fields": {
+    "name": "Apio",
+    "price": "1875.00",
+    "percentage": "100.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:43:17.417Z",
+    "upgrade_date": "2026-01-01T00:48:02.628Z",
+    "unit": "KG",
+    "category": 3,
+    "image": "products/apio.png",
+    "bulk_price": "1500.00",
+    "bulk_quantity": "0.800"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 33,
+  "fields": {
+    "name": "Brocoli",
+    "price": "1000.00",
+    "percentage": "100.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:43:56.977Z",
+    "upgrade_date": "2026-01-01T00:49:58.738Z",
+    "unit": "UN",
+    "category": 3,
+    "image": "products/brocoli.png",
+    "bulk_price": "1000.00",
+    "bulk_quantity": "1.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 34,
+  "fields": {
+    "name": "Verdeo",
+    "price": "2500.00",
+    "percentage": "100.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:44:26.855Z",
+    "upgrade_date": "2026-01-01T16:27:03.857Z",
+    "unit": "KG",
+    "category": 3,
+    "image": "products/verdeo.png",
+    "bulk_price": "2000.00",
+    "bulk_quantity": "0.800"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 35,
+  "fields": {
+    "name": "Lechuga",
+    "price": "1333.33",
+    "percentage": "100.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:45:09.158Z",
+    "upgrade_date": "2025-12-31T18:56:46.020Z",
+    "unit": "KG",
+    "category": 3,
+    "image": "products/lechuga.png",
+    "bulk_price": "8000.00",
+    "bulk_quantity": "6.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 36,
+  "fields": {
+    "name": "Perejil",
+    "price": "6000.00",
+    "percentage": "100.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:47:19.517Z",
+    "upgrade_date": "2026-01-01T00:56:15.391Z",
+    "unit": "KG",
+    "category": 3,
+    "image": "products/perejil.png",
+    "bulk_price": "3000.00",
+    "bulk_quantity": "0.500"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 37,
+  "fields": {
+    "name": "Puerro",
+    "price": "3750.00",
+    "percentage": "100.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:48:42.007Z",
+    "upgrade_date": "2026-01-01T00:56:15.403Z",
+    "unit": "KG",
+    "category": 3,
+    "image": "products/puerro.png",
+    "bulk_price": "3000.00",
+    "bulk_quantity": "0.800"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 38,
+  "fields": {
+    "name": "Repollo",
+    "price": "1500.00",
+    "percentage": "100.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:49:39.880Z",
+    "upgrade_date": "2025-12-31T19:03:45.019Z",
+    "unit": "KG",
+    "category": 3,
+    "image": "products/repollo.png",
+    "bulk_price": "1500.00",
+    "bulk_quantity": "1.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 39,
+  "fields": {
+    "name": "Rucula",
+    "price": "800.00",
+    "percentage": "100.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:50:06.414Z",
+    "upgrade_date": "2026-01-01T16:29:08.183Z",
+    "unit": "UN",
+    "category": 3,
+    "image": "products/rucula.png",
+    "bulk_price": "800.00",
+    "bulk_quantity": "1.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 40,
+  "fields": {
+    "name": "Pepino",
+    "price": "1000.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:50:55.356Z",
+    "upgrade_date": "2026-01-01T00:56:15.381Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/pepino.png",
+    "bulk_price": "16000.00",
+    "bulk_quantity": "16.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 41,
+  "fields": {
+    "name": "Zapallito",
+    "price": "533.33",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:51:40.944Z",
+    "upgrade_date": "2025-12-31T19:02:12.190Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/zapallito.png",
+    "bulk_price": "8000.00",
+    "bulk_quantity": "15.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 42,
+  "fields": {
+    "name": "zucchini",
+    "price": "533.33",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:52:20.962Z",
+    "upgrade_date": "2026-01-01T16:29:08.193Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/zucchini.png",
+    "bulk_price": "8000.00",
+    "bulk_quantity": "15.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 43,
+  "fields": {
+    "name": "Berenjena",
+    "price": "1333.33",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2025-12-31T18:52:49.336Z",
+    "upgrade_date": "2026-01-01T00:49:58.728Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/berenjena.png",
+    "bulk_price": "12000.00",
+    "bulk_quantity": "9.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 44,
+  "fields": {
+    "name": "Sandia",
+    "price": "650.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T16:37:53.927Z",
+    "upgrade_date": "2026-01-01T16:47:07.662Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/sandia.png",
+    "bulk_price": "650.00",
+    "bulk_quantity": null
+  }
+},
+{
+  "model": "products.product",
+  "pk": 45,
+  "fields": {
+    "name": "Mango",
+    "price": "1666.67",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T16:39:41.876Z",
+    "upgrade_date": "2026-01-01T16:47:07.637Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/mango.png",
+    "bulk_price": "15000.00",
+    "bulk_quantity": "9.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 46,
+  "fields": {
+    "name": "Peras",
+    "price": "3235.29",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:43:03.353Z",
+    "upgrade_date": "2026-01-01T20:01:40.383Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/peras.png",
+    "bulk_price": "55000.00",
+    "bulk_quantity": "17.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 47,
+  "fields": {
+    "name": "Ananá",
+    "price": "2300.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:44:23.216Z",
+    "upgrade_date": "2026-01-01T19:59:35.457Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/anana.png",
+    "bulk_price": "2300.00",
+    "bulk_quantity": null
+  }
+},
+{
+  "model": "products.product",
+  "pk": 48,
+  "fields": {
+    "name": "Uva Blanca",
+    "price": "0.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:44:55.287Z",
+    "upgrade_date": "2026-01-01T20:03:42.248Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/uva_blanca.png",
+    "bulk_price": "0.00",
+    "bulk_quantity": null
+  }
+},
+{
+  "model": "products.product",
+  "pk": 49,
+  "fields": {
+    "name": "Uva Negra/Red",
+    "price": "0.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:45:14.016Z",
+    "upgrade_date": "2026-01-01T20:17:35.625Z",
+    "unit": "KG",
+    "category": 1,
+    "image": "products/uva_negra.png",
+    "bulk_price": "0.00",
+    "bulk_quantity": null
+  }
+},
+{
+  "model": "products.product",
+  "pk": 50,
+  "fields": {
+    "name": "Ajo",
+    "price": "800.00",
+    "percentage": "0.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:46:28.164Z",
+    "upgrade_date": "2026-01-01T20:08:52.702Z",
+    "unit": "UN",
+    "category": 2,
+    "image": "products/ajo.png",
+    "bulk_price": "800.00",
+    "bulk_quantity": null
+  }
+},
+{
+  "model": "products.product",
+  "pk": 51,
+  "fields": {
+    "name": "Anco",
+    "price": "1600.00",
+    "percentage": "0.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:47:15.975Z",
+    "upgrade_date": "2026-01-01T20:08:56.206Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/anco.png",
+    "bulk_price": "1600.00",
+    "bulk_quantity": null
+  }
+},
+{
+  "model": "products.product",
+  "pk": 52,
+  "fields": {
+    "name": "Cabuto",
+    "price": "2200.00",
+    "percentage": "0.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:47:51.385Z",
+    "upgrade_date": "2026-01-01T20:09:01.560Z",
+    "unit": "UN",
+    "category": 2,
+    "image": "products/cabutia.png",
+    "bulk_price": "2200.00",
+    "bulk_quantity": null
+  }
+},
+{
+  "model": "products.product",
+  "pk": 53,
+  "fields": {
+    "name": "Chaucha",
+    "price": "6300.00",
+    "percentage": "0.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:48:41.329Z",
+    "upgrade_date": "2026-01-01T20:09:07.614Z",
+    "unit": "KG",
+    "category": 2,
+    "image": "products/chaucha.png",
+    "bulk_price": "6300.00",
+    "bulk_quantity": null
+  }
+},
+{
+  "model": "products.product",
+  "pk": 54,
+  "fields": {
+    "name": "Pascualina",
+    "price": "2100.00",
+    "percentage": "0.00",
+    "discount": false,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:49:29.170Z",
+    "upgrade_date": "2026-01-04T16:02:18.914Z",
+    "unit": "UN",
+    "category": 4,
+    "image": "products/pascualina.png",
+    "bulk_price": "2100.00",
+    "bulk_quantity": null
+  }
+},
+{
+  "model": "products.product",
+  "pk": 55,
+  "fields": {
+    "name": "Empanadas",
+    "price": "1600.00",
+    "percentage": "0.00",
+    "discount": false,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:50:05.817Z",
+    "upgrade_date": "2026-01-04T16:02:18.870Z",
+    "unit": "UN",
+    "category": 4,
+    "image": "products/empanadas.png",
+    "bulk_price": "1600.00",
+    "bulk_quantity": null
+  }
+},
+{
+  "model": "products.product",
+  "pk": 56,
+  "fields": {
+    "name": "Pizza",
+    "price": "2100.00",
+    "percentage": "0.00",
+    "discount": false,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:50:49.652Z",
+    "upgrade_date": "2026-01-04T16:02:18.938Z",
+    "unit": "UN",
+    "category": 4,
+    "image": "products/pizza.png",
+    "bulk_price": "2100.00",
+    "bulk_quantity": null
+  }
+},
+{
+  "model": "products.product",
+  "pk": 57,
+  "fields": {
+    "name": "Huevos Maple",
+    "price": "7600.00",
+    "percentage": "0.00",
+    "discount": false,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:51:43.062Z",
+    "upgrade_date": "2026-01-04T16:02:18.889Z",
+    "unit": "UN",
+    "category": 6,
+    "image": "products/maple_huevos.png",
+    "bulk_price": "7600.00",
+    "bulk_quantity": "1.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 58,
+  "fields": {
+    "name": "Huevos Docena",
+    "price": "3800.00",
+    "percentage": "0.00",
+    "discount": false,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:52:46.094Z",
+    "upgrade_date": "2026-01-04T16:02:18.880Z",
+    "unit": "UN",
+    "category": 6,
+    "image": "products/huevos_docena.png",
+    "bulk_price": "3800.00",
+    "bulk_quantity": "1.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 59,
+  "fields": {
+    "name": "Jengibre",
+    "price": "8800.00",
+    "percentage": "0.00",
+    "discount": false,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:53:28.442Z",
+    "upgrade_date": "2026-01-01T20:07:40.112Z",
+    "unit": "UN",
+    "category": 6,
+    "image": "products/jengibre.png",
+    "bulk_price": "8800.00",
+    "bulk_quantity": "1.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 60,
+  "fields": {
+    "name": "Portobello",
+    "price": "17000.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:54:06.989Z",
+    "upgrade_date": "2026-01-01T20:03:42.273Z",
+    "unit": "KG",
+    "category": 5,
+    "image": "products/portobello.png",
+    "bulk_price": "85000.00",
+    "bulk_quantity": "5.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 61,
+  "fields": {
+    "name": "Champiñón",
+    "price": "16000.00",
+    "percentage": "60.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T19:56:25.555Z",
+    "upgrade_date": "2026-01-01T20:01:40.350Z",
+    "unit": "KG",
+    "category": 5,
+    "image": "products/champinon.png",
+    "bulk_price": "80000.00",
+    "bulk_quantity": "5.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 62,
+  "fields": {
+    "name": "Coliflor",
+    "price": "1500.00",
+    "percentage": "100.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T20:06:58.776Z",
+    "upgrade_date": "2026-01-04T16:02:18.862Z",
+    "unit": "UN",
+    "category": 3,
+    "image": "products/coliflor.png",
+    "bulk_price": "1500.00",
+    "bulk_quantity": null
+  }
+},
+{
+  "model": "products.product",
+  "pk": 63,
+  "fields": {
+    "name": "Rabanito",
+    "price": "1800.00",
+    "percentage": "0.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T20:16:05.823Z",
+    "upgrade_date": "2026-01-04T16:02:18.927Z",
+    "unit": "UN",
+    "category": 3,
+    "image": "products/rabanito.png",
+    "bulk_price": "1800.00",
+    "bulk_quantity": "1.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 64,
+  "fields": {
+    "name": "Menta",
+    "price": "1900.00",
+    "percentage": "0.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-01T20:16:37.819Z",
+    "upgrade_date": "2026-01-04T16:02:18.904Z",
+    "unit": "UN",
+    "category": 3,
+    "image": "products/menta.png",
+    "bulk_price": "1900.00",
+    "bulk_quantity": "1.000"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 65,
+  "fields": {
+    "name": "Choclo",
+    "price": "600.00",
+    "percentage": "0.00",
+    "discount": true,
+    "show_screen": true,
+    "start_date": "2026-01-02T20:13:01.541Z",
+    "upgrade_date": "2026-01-04T16:02:18.852Z",
+    "unit": "UN",
+    "category": 2,
+    "image": "products/choclo.png",
+    "bulk_price": "600.00",
+    "bulk_quantity": "1.000"
+  }
+}
+]

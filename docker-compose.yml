@@ -1,0 +1,76 @@
+
+
+services:
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  redis:
+    image: redis:alpine
+    restart: always
+    ports:
+      - "6379:6379"
+
+  backend:
+    build:
+      context: ./BackEnd
+      dockerfile: Dockerfile
+    command: sh -c "python manage.py migrate && python manage.py loaddata fixtures/initial_data.json && python manage.py collectstatic --noinput && daphne -b 0.0.0.0 -p 8000 balanza_verdu.asgi:application"
+    volumes:
+      - ./BackEnd/Django:/app/Django
+      - static_volume:/app/Django/balanza_verdu/staticfiles
+      - media_volume:/app/Django/balanza_verdu/media
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=${DEBUG}
+      - DB_ENGINE=django.db.backends.mysql
+      - DB_NAME=${MYSQL_DATABASE}
+      - DB_USER=${MYSQL_USER}
+      - DB_PASSWORD=${MYSQL_PASSWORD}
+      - DB_HOST=db
+      - DB_PORT=3306
+      - REDIS_HOST=${REDIS_HOST:-redis}
+      - SECRET_KEY=${DJANGO_SECRET_KEY}
+    depends_on:
+      - db
+      - redis
+
+  scale-agent:
+    build:
+      context: ./BackEnd
+      dockerfile: Dockerfile
+    restart: always
+    command: python /app/Django/fake_scale_agent_prod.py --server ws://backend:8000
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+    depends_on:
+      - backend
+
+  frontend:
+    build:
+      context: ./FrontEnd/verdu
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - static_volume:/app/static
+      - media_volume:/app/media
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
+  static_volume:
+  media_volume:
